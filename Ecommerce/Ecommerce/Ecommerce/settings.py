@@ -83,16 +83,16 @@ WSGI_APPLICATION = 'Ecommerce.wsgi.application'
 import os
 if os.environ.get("RENDER"):
 # Production (Render + Railway MySQL)
-DATABASES = {
-"default": { I
-"ENGINE": "django.db.backends.mysql",
-"NAME": os.environ.get("MYSQLDATABASE"),
-"USER": os.environ.get("MYSQLUSER"),
-"PASSWORD": os.environ.get("MYSQLPASSWORD"),
-"HOST": os.environ.get("MYSQLHOST"),
-"PORT": os.environ.get("MYSQLPORT", "3306"),
+    DATABASES = {
+        "default": { 
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": os.environ.get("MYSQLDATABASE"),
+        "USER": os.environ.get("MYSQLUSER"),
+        "PASSWORD": os.environ.get("MYSQLPASSWORD"),
+        "HOST": os.environ.get("MYSQLHOST"),
+        "PORT": os.environ.get("MYSQLPORT", "3306"),
 
-}
+    }
 
 }
 
